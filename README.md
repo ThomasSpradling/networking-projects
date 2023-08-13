@@ -32,3 +32,10 @@ client.py [server_host] [server_port] [filename]
 ```
 where here, it is best to use `server_host=localhost` and `server_port=3000`. Just make sure to include the `/` in the filename, as in `/example.html`. If done correctly, you should get an HTTP response back printed to the console.
 
+### Upcoming
+[x] ~~Mini Socket Application~~
+[x] ~~Web Server~~
+[] Ping program
+[] Mail client
+[] Multi-threaded Web Proxy
+
