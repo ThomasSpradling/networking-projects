@@ -1,5 +1,5 @@
 # Networking Projects
-This repository consists up of a few projects I'm working on as I read through [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/). For each project I work on, here, I'll give a brief description of the project as well as anything I learned from its completion.
+This repository consists up of a few projects I'm working on as I read through [Computer Networking: A Top-Down Approach](https://www.amazon.com/Computer-Networking-Top-Down-Approach-7th/dp/0133594149/). For each project I work on here, I'll give a brief description of the project as well as anything I learned from its completion.
 
 ## Projects
 
@@ -32,9 +32,46 @@ client.py [server_host] [server_port] [filename]
 ```
 where here, it is best to use `server_host=localhost` and `server_port=3000`. Just make sure to include the `/` in the filename, as in `/example.html`. If done correctly, you should get an HTTP response back printed to the console.
 
+### Project 03: Ping Application
+*Language: Python*
+
+Here, I built a simple ping application using the UDP transport protocol. The application has a server that listens for messages and replies to them. If the client does see a reply within 1.0 seconds, we assume that packet is lost. Thus this client application sends ten packets to the server and calculates the maximum, minimum, and average round-trip time as well as the package-loss percentage. To better simulate package-loss (as even though UDP is not reliable, package loss is still rare), the server is set up to not respond about 30% of the time.
+
+To use, first run the server by using:
+```bash
+python3 server.py
+```
+and, in a different terminal,
+```bash
+python3 client.py
+```
+
+By default, the expected output format should be something like:
+```
+PING localhost:3000
+
+
+24 bytes from localhost:3000: udp_seq=1 time=1.58 ms
+Request timed out for udp_seq 2
+Request timed out for udp_seq 3
+25 bytes from localhost:3000: udp_seq=4 time=1.06 ms
+Request timed out for udp_seq 5
+24 bytes from localhost:3000: udp_seq=6 time=1.05 ms
+Request timed out for udp_seq 7
+24 bytes from localhost:3000: udp_seq=8 time=0.93 ms
+24 bytes from localhost:3000: udp_seq=9 time=0.44 ms
+Request timed out for udp_seq 10
+
+
+--- localhost ping statistics ---
+10 packets transmitted, 5 received, 50.0% packet loss
+round-trip min/avg/max = 0.44/1.01/1.58 ms
+```
+Although, it can be adjusted to place a client and server application on different machines (i.e. via AWS) to simulate a more realistic scenario.
+
 ## Upcoming
 - [x] ~~Mini Socket Application~~
 - [x] ~~Web Server~~
-- [ ] Ping program
+- [x] ~~Ping program~~
 - [ ] Mail client
 - [ ] Multi-threaded Web Proxy
