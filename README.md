@@ -75,3 +75,5 @@ Although, it can be adjusted to place a client and server application on differe
 - [x] ~~Ping program~~
 - [ ] Mail client
 - [ ] Multi-threaded Web Proxy
+- [ ] Reliable Transport Protocol
+- [ ] ICMP Ping
