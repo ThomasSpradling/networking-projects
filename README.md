@@ -69,11 +69,16 @@ round-trip min/avg/max = 0.44/1.01/1.58 ms
 ```
 Although, it can be adjusted to place a client and server application on different machines (i.e. via AWS) to simulate a more realistic scenario.
 
+### Project 04: Mail Client
+*Language: Python*
+
+This project is a simple follow of the SMTP protocol which involves a series of messages with the client sending commands to the server, expecting responses with a proper code. In order to bypass some security concerns, it was necessary use SSL over TCP. There is no practical value in trying to use this application as, without further authentication, it won't work for all platforms. For example, via the Google SMTP server, one would need to obtain an API token in order to use OAuth 2.0 and access the server from this client. This project's entire purpose was just to get used to the SMTP protocol rather than to build a functional application.
+
 ## Upcoming
 - [x] ~~Mini Socket Application~~
 - [x] ~~Web Server~~
 - [x] ~~Ping program~~
-- [ ] Mail client
+- [x] ~~Mail client~~
 - [ ] Multi-threaded Web Proxy
 - [ ] Reliable Transport Protocol
 - [ ] ICMP Ping
