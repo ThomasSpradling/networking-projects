@@ -79,6 +79,5 @@ This project is a simple follow of the SMTP protocol which involves a series of 
 - [x] ~~Web Server~~
 - [x] ~~Ping program~~
 - [x] ~~Mail client~~
-- [ ] Multi-threaded Web Proxy
 - [ ] Reliable Transport Protocol
-- [ ] ICMP Ping
+- [ ] Distributed Distance Vector Routing
